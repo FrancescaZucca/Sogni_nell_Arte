@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="DC.Title" content="Il Sogno nell'Arte">
+  <meta name="DC.Creator" content="Francesca Zucca">
+  <meta name="DC.Subject" content="La rappresentazione dei sogni nell'arte">
+  <meta name="DC.Description" content="Raccolta digitale di opere figurative che trattano il tema del sogno nell'arte, e l'evoluzione dell'argomento nel corso del tempo">
+  <meta name="DC.Publisher" content="Alma Mater Studiorum">
+  <meta name="DC.Date" content="25/5/2023">
+  <meta name="DC.Type" content="Sito web">
+  <meta name="DC.Format" content="HTML/CSS/JS">
+  <link rel="DC.Identifier" href="https://francescazucca.github.io/Sogno_nell_Arte/">
+  <meta name="DC.Language" content="it">
+  <title>MAP</title>
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <meta http-equiv="refresh" content=>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css" integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+ <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js" integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script> 
+</head>
+
+<body id="MAPPA">
+  <header>
+  </header>
+  <nav>
+    <a href="index.html" class="nav_home"><i class="fa fa-home"></i></a>
+    <a href="Raccolta.html" class="nav_element">Raccolta</a>
+    <a href="linea_del_tempo.htm" class="nav_element">Linea del tempo</a>
+    <a href="mappa.html" class="nav_element">Mappa</a>
+    <div class="dropdown1">
+      <button class="dropbtnProgetto" onclick="myFunctionProgetto()">Sul Progetto</button>
+      <div class="dropdown-content1" id="myDropdownProgetto">
+        <a href="WPP.html">Web project Plan</a>
+        <a href="#C7">Bibliografia</a>
+      </div>
+    </div>
+  </nav>
+
+  <div id="map"></div>
+  <footer>
+    <div class="separatore"></div>
+    <div class="contenuti">
+      <hr>
+      <table>
+        <tr>
+          <td>Progetto di laurea in Informatica Umanistica</td>
+          <td><a href="">Contatti</a> | <a href="WPP.html">Web Project Plan</a></td>
+        </tr>
+        <tr>
+          <td><a href="https://www.unibo.it/it">Alma Mater Studiorum</a></td>
+          <td>&#169;2023 Francesca Zucca</td>
+        </tr>
+      </table>
+    </div>
+  </footer>
+</html>
+
+ 
+<script>
+  var map = L.map('map').setView([32.067808, -21.941981], 3);
+
+var basic  = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+});
+
+var english = L.tileLayer('https://maptiles.p.rapidapi.com/en/map/v1/{z}/{x}/{y}.png?rapidapi-key={apikey}', {
+  attribution: '&copy; <a href="http://www.maptilesapi.com/">MapTiles API</a>, &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  apikey: '<your apikey>',
+  maxZoom: 19
+});
+
+var dark = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner/{z}/{x}/{y}{r}.{ext}', {
+  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  subdomains: 'abcd',
+  minZoom: 0,
+  maxZoom: 20,
+  ext: 'png'
+});
+
+var light = L.tileLayer('https://stamen-tiles-{s}.a.ssl.fastly.net/toner-lite/{z}/{x}/{y}{r}.{ext}', {
+  attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+  subdomains: 'abcd',
+  minZoom: 0,
+  maxZoom: 20,
+  ext: 'png'
+});
+
+light.addTo(map)
+
+// ecco le opere
+
+var markerDerTraumer = L.marker([59.93994187034638, 30.314532877794072], {title: "Der Traumer"}).addTo(map);
+markerDerTraumer.bindPopup("<p>Der Traumer</p>");
+
+var markerTheSleepofReasonProducesMonsters = L.marker([39.04508808730089, -94.58095522208998], {title: "The sleep of reason produces monsters"}).addTo(map);
+markerTheSleepofReasonProducesMonsters.bindPopup("<p>The sleep of reason produces monsters</p>");
+
+var markerTheSleepingGypsy = L.marker([40.76167758743074, -73.9775845314443], {title: "The sleeping Gypsy"}).addTo(map);
+markerTheSleepingGypsy.bindPopup("<p>The sleeping Gypsy</p>");
+
+var markerDreamCausedbytheFlightofaBee = L.marker([40.41617145508194, -3.694961460347164], {title: "Dream caused by the flight of a bee around a pomegranate a second before waking"}).addTo(map);
+markerDreamCausedbytheFlightofaBee.bindPopup("<p>Dream caused by the flight of a bee around a pomegranate a second before waking</p>");
+
+var markerCharonsBoat = L.marker([43.77534901045581, 11.255812450923832], {title: "Charon's boat, the sleep of Night and Morpheus"}).addTo(map);
+markerCharonsBoat.bindPopup("<p>Charon's boat, the sleep of Night and Morpheus</p>");
+
+var markerTheSleepingBeauty = L.marker([18.00446838, -66.61694229], {title: "THe Sleeping Beauty"}).addTo(map);
+markerTheSleepingBeauty.bindPopup("<p>THe Sleeping Beauty</p>");
+
+var markerJoachimsDream = L.marker([45.41122077225636, 11.879616181889213], {title: "Joachim's Dream"}).addTo(map);
+markerJoachimsDream.bindPopup("<p>Joachim's Dream</p>");
+
+var markerDreamVision = L.marker([48.193814847823, 16.382611474323703], {title: "Dream Vision"}).addTo(map);
+markerDreamVision.bindPopup("<p>Dream Vision</p>");
+
+var markerScaladiGiacobbe = L.marker([41.9032581879618, 12.453824496829057], {title: "Scala di Giacobbe"}).addTo(map);
+markerScaladiGiacobbe.bindPopup("<p>Scala di Giacobbe</p>");
+
+var markerLeSongedeJacob = L.marker([43.935596383391086, 4.846773378852311], {title: "Le songe de Jacob"}).addTo(map);
+markerLeSongedeJacob.bindPopup("<p>Le Songe de Jacob</p>");
+
+var markerTheDreamofSaintJoseph = L.marker([47.21982569501413, -1.5475377513314812
+], {title: "The Dream of Saint Joseph"}).addTo(map);
+markerTheDreamofSaintJoseph.bindPopup("<p>The Dream of Saint Joseph</p>");
+
+var markerSleepingApollo = L.marker([47.51649391, 19.07633752], {title: "Sleeping Apollo and the Muses with Fame"}).addTo(map);
+markerSleepingApollo.bindPopup("<p>Sleeping Apollo and the Muses with Fame</p>");
+
+var markerJacobsDream = L.marker([52.3601745784328, 4.885213363702792], {title: "Jacob's Dream"}).addTo(map);
+markerJacobsDream.bindPopup("<p>Jacob's Dream</p>");
+
+var markerTheNightmare = L.marker([42.35953389372594, -83.0644956355823
+], {title: "The Nightmare"}).addTo(map);
+markerTheNightmare.bindPopup("<p>The Nightmare</p><img src");
+
+
+
+</script>
