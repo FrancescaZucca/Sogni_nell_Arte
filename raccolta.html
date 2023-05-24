@@ -2,7 +2,18 @@
 <!DOCTYPE html>
 <html>
 <head>
+	<meta name="DC.Title" content="Il Sogno nell'Arte">
+	<meta name="DC.Creator" content="Francesca Zucca">
+	<meta name="DC.Subject" content="La rappresentazione dei sogni nell'arte">
+	<meta name="DC.Description" content="Raccolta digitale di opere figurative che trattano il tema del sogno nell'arte, e l'evoluzione dell'argomento nel corso del tempo">
+	<meta name="DC.Publisher" content="Alma Mater Studiorum">
+	<meta name="DC.Date" content="25/5/2023">
+	<meta name="DC.Type" content="Sito web">
+	<meta name="DC.Format" content="HTML/CSS/JS">
+	<link rel="DC.Identifier" href="https://francescazucca.github.io/Sogno_nell_Arte/">
+	<meta name="DC.Language" content="it">
 	<title>Raccolta</title>
+	<link rel="icon" type="image/x-icon" href="img/favicon.ico">
 	<link rel="stylesheet" href="style.css">
 	<script src="script.js"></script>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -19,18 +30,8 @@
 		<div class="dropdown1">
 			<button class="dropbtnProgetto" onclick="myFunctionProgetto()">Sul Progetto</button>
 			<div class="dropdown-content1" id="myDropdownProgetto">
-				<div class="dropdown2">
-					<a href="">Web project Plan</a>
-					<div class="dropdown-content2">
-						<a href="">Brief</a>
-						<a href="">Benchmark</a>
-						<a href="">Struttura</a>
-						<a href="">Layout</a>
-						<a href="">Usabilità</a>
-						<a href="">Servizi</a>
-					</div>
-				</div>
-				<a href="">Bibliografia</a>
+				<a href="WPP.html">Web project Plan</a>
+				<a href="#C7">Bibliografia</a>
 			</div>
 		</div>
 	</nav>
@@ -43,69 +44,87 @@
 		<h2>In evidenza</h2>
 		<div class="vetrina">
 			<div class="item a">
-				<img src="img/immagini_vere/JoachimsDream_Giotto.jpg">
+				<img src="img/opere/JoachimsDream_Giotto.jpg">
 				<a href="">Le origini</a>
 			</div>
 			<div class="item b">
-				<img src="img/immagini_vere/ScaladiGiacobbe_Raffaello.jpg">
+				<img src="img/opere/ScaladiGiacobbe_Raffaello.jpg">
 				<a href="">il Rinascimento</a>
 			</div>
 			<div class="item c">
-				<img src="img/immagini_vere/TheDreamofSaintJoseph_DelaTour.jpg">
+				<img src="img/opere/TheDreamofSaintJoseph_DelaTour.jpg">
 				<a href="">il sogno nella visione cristiana</a>
 			</div>
 			<div class="item d">
-				<img src="img/immagini_vere/TheSleepingGypsy_Rousseau.jpg">
+				<img src="img/opere/TheSleepingGypsy_Rousseau.jpg">
 				<a href="">la concezione contemporanea</a>
 			</div>
 			<div class="item e">
-				<img src="img/immagini_vere/TheNightmare_Fuseli.jpeg">
+				<img src="img/opere/TheNightmare_Fuseli.jpeg">
 				<a href="">il Romanticismo</a>
 			</div>
 		</div>
 	</div>
 	<div class="catalogoContainer">
-			<div id="staDentro">
-				<a href="">filtro</a>
-				<a href="">filtro</a>
-				<a href="">filtro</a>
+		<hr>
+		<div id="staDentro">
+			<a href="">Data</a>
+			<a href="">Provenienza</a>
+			<a href="">Supporto</a>
+			<a href="">Dimensione</a>
+		</div>
+		<div id="staFuori">
+			<span onclick="apriChiudi()">&#9776;</span>
+		</div>
+		<div class="tools">
+			<div id="InOrdine">
+			  <button onclick="InOrdine()" id="InOrdineBottone">In Ordine</button>
+			  <div id="InOrdineContenuto">
+			    <a href="#">Alfabetico Opera</a>
+			    <a href="#">Alfabetico Autore</a>
+			    <a href="#">Cronologico</a>
+			  </div>
 			</div>
-			<div id="staFuori">
-				<span onclick="apriChiudi()">&#9776;</span>
+			<div class="search-container">
+			    <form action="/action_page.php">
+			      <input type="text" placeholder="Cerca.." name="search">
+			      <button type="submit"><i class="fa fa-search"></i></button>
+			    </form>
 			</div>
+		</div>
 		<div id="galleriaContainer">
 			<div class="galleriaRow">
 			  <div class="galleriaColumn">
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/DerTraumer_Friedrich.jpg">
+			    	<img src="img/opere/DerTraumer_Friedrich.jpg">
 			    	<div class="presentazione">
 			    		<h1>Der Traumer</h1>
 			    		<p>Caspar David Friedrich, 1835</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/DreamVision_Durer.jpg">
+			    	<img src="img/opere/DreamVision_Durer.jpg">
 			    	<div class="presentazione">
 			    		<h1>Dream Vision</h1>
 			    		<p>Albrecht Durer, 1525</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/JakobsDroom_DeVois.jpeg">
+			    	<img src="img/opere/JakobsDroom_DeVois.jpeg">
 			    	<div class="presentazione">
 			    		<h1>Jacob's Dream</h1>
 			    		<p>Ary de Vois, 1670</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/JoachimsDream_Giotto.jpg">
+			    	<img src="img/opere/JoachimsDream_Giotto.jpg">
 			    	<div class="presentazione">
 			    		<h1>Joachim's Dream</h1>
 			    		<p>Giotto di Bondone, 1303</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			  		<img src="img/immagini_vere/MidsummerNightsDream_Dorè.jpg">
+			  		<img src="img/opere/MidsummerNightsDream_Dorè.jpg">
 			  		<div class="presentazione">
 			    		<h1>Midsummer Night's Dream</h1>
 			    		<p>Gustave Doré, 1870</p>
@@ -114,35 +133,35 @@
 			  </div>
 			  <div class="galleriaColumn">
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/SleepingApolloandtheMuseswithFame_Lotto.jpg">
+			    	<img src="img/opere/SleepingApolloandtheMuseswithFame_Lotto.jpg">
 			    	<div class="presentazione">
 			    		<h1>Sleeping Apollo and the Muses with Fame</h1>
 			    		<p>Lorenzo Lotto, 1549</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/SuenoCausadoVueloAbejaAlrededorGranadaSegundoAntesDespertar_Dalì.jpg">
+			    	<img src="img/opere/SuenoCausadoVueloAbejaAlrededorGranadaSegundoAntesDespertar_Dalì.jpg">
 			    	<div class="presentazione">
 			    		<h1>Dream Caused by the Flight of a Bee around a Pomegranate a Second before Waking</h1>
 			    		<p>Salvador Dalì, 1944</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/LeSongedeJacob_Dipre.jpg">
+			    	<img src="img/opere/LeSongedeJacob_Dipre.jpg">
 			    	<div class="presentazione">
 			    		<h1>Le Songe de Jacob</h1>
 			    		<p>Nicolas Dipre, 1500</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/TheSleepofReasonProducesMonsters_Goya.jpg">
+			    	<img src="img/opere/TheSleepofReasonProducesMonsters_Goya.jpg">
 			    	<div class="presentazione">
 			    		<h1>The Sleep of Reason produces Monsters</h1>
 			    		<p>Francisco de Goya, 1799</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-					<img src="img/immagini_vere/TheSleepingGypsy_Rousseau.jpg">
+					<img src="img/opere/TheSleepingGypsy_Rousseau.jpg">
 					<div class="presentazione">
 			    		<h1>The Sleeping Gypsy</h1>
 			    		<p>Henri Rousseau, 1897</p>
@@ -151,7 +170,7 @@
 			  </div>
 			  <div class="galleriaColumn">
 			  	<div class="galleriaBox">
-			    	<img src="img/immagini_vere/TheDreamofSaintJoseph_DelaTour.jpg">
+			    	<img src="img/opere/TheDreamofSaintJoseph_DelaTour.jpg">
 			    	<div class="presentazione">
 			    		<h1>The Dream of Saint Joseph</h1>
 			    		<p>Georges de la Tour, 1625</p>
@@ -159,7 +178,7 @@
 			    </div>
 			    <div class="galleriaBox">
 			    	<a href="item.htm">
-				    	<img src="img/immagini_vere/TheNightmare_Fuseli.jpeg">
+				    	<img src="img/opere/TheNightmare_Fuseli.jpeg">
 				    	<div class="presentazione">
 				    		<h1>The Nightmare</h1>
 				    		<p>Henry Fuseli, 1781</p>
@@ -167,21 +186,21 @@
 				    </a>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/CharonsBoat_Giordano.jpg">
+			    	<img src="img/opere/CharonsBoat_Giordano.jpg">
 			    	<div class="presentazione">
 			    		<h1>Charon's Boat, the Sleep of Night and Morpheus</h1>
 			    		<p>Luca Giordano, 1685</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/ScaladiGiacobbe_Raffaello.jpg">
+			    	<img src="img/opere/ScaladiGiacobbe_Raffaello.jpg">
 			    	<div class="presentazione">
 			    		<h1>Scala di Giacobbe</h1>
 			    		<p>Raffaello Sanzio, 1512</p>
 			    	</div>
 			    </div>
 			    <div class="galleriaBox">
-			    	<img src="img/immagini_vere/TheSleepingBeauty_Jones.jpg">
+			    	<img src="img/opere/TheSleepingBeauty_Jones.jpg">
 			    	<div class="presentazione">
 			    		<h1>The Sleeping Beauty</h1>
 			    		<p>Edward Burne-Jones, 1890</p>
@@ -191,5 +210,21 @@
 			</div>
 		</div>
 	</div>
+	<footer>
+		<div class="separatore"></div>
+		<div class="contenuti">
+			<hr>
+			<table>
+				<tr>
+					<td>Progetto di laurea in Informatica Umanistica</td>
+					<td><a href="">Contatti</a> | <a href="WPP.html">Web Project Plan</a></td>
+				</tr>
+				<tr>
+					<td><a href="https://www.unibo.it/it">Alma Mater Studiorum</a></td>
+					<td>&#169;2023 Francesca Zucca</td>
+				</tr>
+			</table>
+		</div>
+	</footer>
 </body>
 </html>

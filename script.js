@@ -64,15 +64,15 @@ function showSlides(n) {
 /* CAMBIOSFONDOINDEXCAMBIOSFONDOINDEXCAMBIOSFONDOINDEXCAMBIOSFONDOINDEXCAMBIOSFONDOINDEXCAMBIOSFONDOINDEXCAMBIOSFONDOINDEXCAMBIOSFONDOINDEX */
 
 function indexBackground1() {
-  document.getElementById("INDEX").style.backgroundImage = "url(img/immagini_vere/TheNightmare_Fuseli.jpeg)";
+  document.getElementById("INDEX").style.backgroundImage = "url(img/opere/TheNightmare_Fuseli.jpeg)";
 }
 
 function indexBackground2() {
-  document.getElementById("INDEX").style.backgroundImage = "url(img/immagini_vere/SuenoCausadoVueloAbejaAlrededorGranadaSegundoAntesDespertar_Dalì.jpg)";
+  document.getElementById("INDEX").style.backgroundImage = "url(img/opere/SuenoCausadoVueloAbejaAlrededorGranadaSegundoAntesDespertar_Dalì.jpg)";
 }
 
 function indexBackground3() {
-  document.getElementById("INDEX").style.backgroundImage = "url(img/immagini_vere/TheSleepofReasonProducesMonsters_Goya.jpg)";
+  document.getElementById("INDEX").style.backgroundImage = "url(img/opere/TheSleepofReasonProducesMonsters_Goya.jpg)";
 }
 
 /* FILTRICATALOGOFILTRICATALOGOFILTRICATALOGOFILTRICATALOGOFILTRICATALOGOFILTRICATALOGOFILTRICATALOGOFILTRICATALOGO */
@@ -89,3 +89,8 @@ function apriChiudi() {
   }
 }
 
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function InOrdine() {
+  document.getElementById("InOrdineContenuto").classList.toggle("show");
+}

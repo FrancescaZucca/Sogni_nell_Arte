@@ -1,6 +1,6 @@
 #INDEX {
   background-color: rgba(0, 0, 15, 0.55);
-  background-image: url("img/immagini_vere/TheNightmare_Fuseli.jpeg");
+  background-image: url("img/opere/TheNightmare_Fuseli.jpeg");
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-blend-mode: overlay;
@@ -21,6 +21,16 @@ body {
 h1 {
   font-size: 45px;
 }
+
+a {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+a:hover {
+  text-decoration-line: underline;
+}
+
 
 /* NAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBARNAVBAR */
 
@@ -81,7 +91,7 @@ nav .dropdown1 {
   width: 23.5%;
 }
 
-.dropbtnCatalogo, .dropbtnProgetto {
+.dropbtnProgetto {
   cursor: pointer;
   font-size: 22px;  
   border: none;
@@ -94,7 +104,7 @@ nav .dropdown1 {
   width: 100%;
 }
 
-nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
+nav a:hover, nav .dropbtnProgetto:hover {
   background-color: #272624;
   color: #e6e4de;
 }
@@ -102,7 +112,7 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
 .dropdown-content1 {
   display: none;
   position: absolute;
-  z-index: 1;
+  z-index: 3;
   width: inherit;
 }
 
@@ -114,7 +124,7 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
   	text-decoration: none;
   	display: block;
   	text-align: center;
-  	width: 50%;
+  	width: 100%;
 }
 
 .dropdown-content1 a:hover {
@@ -126,16 +136,46 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
   display: block;
 }
 
-.dropdown-content2 {
-  display: none;
-  position: absolute;
-  left: 50%;
-  top: 0;
+/* FOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTERFOOTER */
+
+footer {
   width: 100%;
+  float: left;
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 15, 1));
 }
 
-.dropdown2:hover .dropdown-content2 {
-	display: block;
+footer .separatore {
+  width: 100%;
+  height: 60px;
+  box-shadow: 8px 0px 14px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+footer .contenuti {
+  padding: 20px 0 60px 0;
+}
+
+footer .contenuti hr {
+  width: 90%;
+}
+
+footer .contenuti table {
+  width: 80%;
+  margin: auto;
+}
+
+footer .contenuti table td {
+ padding: 20px 0;
+ font-size: 20px;
+}
+
+footer .contenuti table td a {
+ text-decoration: none;
+ color: inherit;
+}
+
+footer .contenuti table td a:hover {
+ text-decoration-line: underline;
 }
 
 
@@ -263,6 +303,9 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
   text-align: left;
 }
 
+.capitolo_index.mappa div p {
+  margin-left: 50px;
+}
 
 .capitolo_index, .indexSlideshow-container {
   background-color: rgba(0, 0, 15, 0.50);
@@ -377,15 +420,24 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
   bottom: 90%;
 }
 
+.catalogoContainer {
+  margin-top: 80px;
+}
+
+.catalogoContainer .tools {
+  width: 100%;
+  padding: 40px 0 20px 0;
+}
+
 #staDentro {
-  position: fixed;
+  position: sticky;
   top: 22%;
   left: 0;
   display: none;
   float: left;
   background-color: #d9d9d9;
   width: 75%;
-  padding: 50px 0;
+  padding: 50px 0 0 0;
   z-index: 1;
   width: 15%;
   margin-top: 15px;
@@ -393,7 +445,7 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
 }
 
 #staFuori {
-  position: fixed;
+  position: sticky;
   top: 22%;
   left: 0;
   background-color: #d9d9d9;
@@ -411,6 +463,16 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
   color: #272624;
   display: block;
   transition: 0.3s;
+  padding: 15px 30px;
+  border: solid;
+}
+
+#staDentro a:hover {
+  color: #d9d9d9;
+  display: block;
+  transition: 0.3s;
+  background-color: #272624;
+  
 }
 
 #staFuori span {
@@ -425,9 +487,74 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
   .sidenav a {font-size: 18px;}
 }
 
+.search-container {
+  width: 20%;
+  float: right;
+  position: relative;
+}
+
+.search-container form input{
+  font-size: 20px;
+  background-color: #d9d9d9;
+  color: #272624;
+  box-shadow: 0px 3px 5px 0px black;
+}
+
+.search-container form button {
+  margin: 0;
+  font-size: 20px;
+  border: none;
+  background-color: #d9d9d9;
+  color: #272624;
+  box-shadow: 0px 3px 5px 0px black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.search-container form button:hover {
+  background-color: #272624;
+  color: #d9d9d9;
+}
+
+#InOrdine {
+  position: relative;
+  display: inline-block;
+  width: 15%;
+  float: right;
+}
+
+#InOrdineBottone {
+  font-size: 20px;
+  padding: 5px 20px;
+  border: none;
+  background-color: #d9d9d9;
+  color: #272624;
+  box-shadow: 0px 3px 5px 0px black;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#InOrdineBottone:hover, #InOrdineBottone:focus {
+  background-color: #272624;
+  color: #d9d9d9;
+}
+
+#InOrdineContenuto {
+  display: none;
+  position: absolute;
+  background-color: #272624;
+  color: #d9d9d9;
+  z-index: 2;
+}
+
+.show {
+  display: block;
+}
+
 #galleriaContainer {
- background-color: #272624;
+  margin-top: 20px;
  transition: margin-left .5s;
+ width: 100%;
 }
 
 .galleriaRow {
@@ -572,4 +699,150 @@ nav a:hover, nav .dropbtnCatalogo:hover, nav .dropbtnProgetto:hover {
 #ITEM .item_corpo .immagine2 table td {
   padding: 20px 5px;
   border-bottom: 1px black;
+}
+
+/* PROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTOPROGETTO */
+
+#WPP h1 {
+  text-align: center;
+}
+
+#WPP h2 {
+  text-decoration: underline;
+}
+
+#WPP .corpo {
+  width: 100%;
+  font-size: 25px;
+  display: table;
+  background-color: #d9d9d9;
+}
+
+#WPP .corpo .tesi {
+  width: 80%;
+  margin: 0;
+  float: left;
+  padding: 0px 70px;
+  background-color: #272624;
+}
+
+#WPP .corpo .tesi div {
+  width: 100%;
+}
+
+#WPP .corpo .tesi div div {
+  display: table;
+}
+
+#C3_1 img {
+  width: 50%;
+  float: left;
+  position: sticky;
+  top: 20%;
+}
+
+#C3_1 p {
+  width: 50%;
+  float: left;
+}
+
+#C3_2 img {
+  width: 60%;
+  float: right;
+  position: sticky;
+  top: 20%;
+}
+
+#C3_2 p {
+  width: 40%;
+  float: left;
+}
+
+#C4_1 img {
+  width: 35%;
+  float: left;
+  position: sticky;
+  top: 0;
+}
+
+#C4_1 p {
+  width: 65%;
+  float: left;
+  padding: 0 30px;
+}
+
+#C4_2 img {
+  width: 35%;
+  float: left;
+  position: sticky;
+  top: 0;
+}
+
+#C4_2 p {
+  width: 65%;
+  float: left;
+  padding: 0 30px;
+}
+
+#C4_3 img {
+  width: 35%;
+  float: left;
+  position: sticky;
+  top: 0;
+}
+
+#C4_3 p {
+  width: 65%;
+  float: left;
+  padding: 0 30px;
+}
+
+#C4_4 img {
+  width: 35%;
+  float: left;
+  position: sticky;
+  top: 0;
+}
+
+#C4_4 p {
+  width: 65%;
+  float: left;
+  padding: 0 30px;
+}
+
+#C7 a {
+  text-decoration: none;
+  color: #d9d9d9;
+}
+
+#C7 a:hover {
+  text-decoration: underline;
+}
+
+#WPP .corpo .menù {
+  width: 20%;
+  margin: 0;
+  padding: 0 18px;
+  float: left;
+  position: sticky;
+  top: 10%;
+  height: 100%;
+  font-size: 23px;
+  text-decoration: none;
+  color:#272624;
+}
+
+#WPP .corpo .menù a {
+  text-decoration: none;
+  color: #272624;
+}
+
+#WPP .corpo .menù a:hover {
+  text-decoration: underline;
+  color: #272624;
+}
+
+#WPP .corpo .menù a:visited {
+  text-decoration: none;
+  color: #272624;
 }
